@@ -41,8 +41,11 @@
 		<section id="services">  
 			<div class="nos_services">
 				<h2>nos services</h2>
-				<hr>
-				<span class="title_bullet"><i class="fas fa-circle"></i></span>
+				<div class="title_decoration">
+					<hr class="left_line">
+					<div class="middle_point"></div>
+					<hr class="right_line">
+				</div>
 				<p class="section_ss-titre">Nous vous aidons à définir votre stratégie web pour assurer en amont le succès de vos projets web. Nous définissons la meilleure façon de promouvoir vos produits/services.</p>
 			</div>
 			<div class="services">
@@ -54,7 +57,7 @@
 						<li>
 							<div class="icon_left"> <!-- icons à gauche de la liste -->
 								<span class="icon"><i class="fas fa-chart-line fa-lg"></i></i></span>
-								<span class="blue_dot">&bull;</span>
+								<div class="blue_dot"></div>
 							</div>
 							<div class="UX">
 								<h3>UX design</h3>
@@ -63,8 +66,8 @@
 						</li>
 						<li>
 							<div class="icon_left"> <!-- icons à gauche de la liste -->
-								<span class="icon"><i class="fas fa-cubes fa-lg"></i></span>
-							  	<span class="blue_dot">&bull;</span>
+								<span class="icon"><i class="fas fa-cubes fa-lg"></i></span>								<div class="blue_dot"></div>
+								<div class="blue_dot"></div>
 							</div>
 							<div class="UI">
 								<h3>UI design</h3>
@@ -74,7 +77,7 @@
 						<li>
 							<div class="icon_left"> <!-- icons à gauche de la liste -->
 								<span class="icon"><i class="fas fa-chart-pie fa-lg"></i></span>
-							  	<span class="blue_dot">&bull;</span>
+								<div class="blue_dot"></div>
 							</div>
 							<div class="SEO">
 								<h3>SEO</h3>
@@ -89,21 +92,22 @@
 		<section id="projets">  
 			<div class="nos_projets">
 				<h2>nos projets</h2>
-				<hr>
-				<span class="title_bullet"><i class="fas fa-circle"></i></span>
+				<div class="title_decoration">
+					<hr class="left_line">
+					<div class="middle_point"></div>
+					<hr class="right_line">
+				</div>
 				<p class="section_ss-titre">Voici une sélection de réalisations pour nos clients</p>
 			</div>	
 			<div class="nav_projets">
-				<ul>
-					<li><a href="#" class="first">All works</a></li>
-					<li><a href="#">Creative</a></li>
-					<li><a href="#">Corporate</a></li>
-					<li><a href="#" class="last">Portfolio</a></li>
-				</ul>
+				<div><a href="#" class="first">All works</a></div>
+				<div><a href="#">Creative</a></div>
+				<div><a href="#">Corporate</a></div>
+				<div><a href="#" class="last">Portfolio</a></div>	
 				<div class="arrow_down" id="one"></div>
 				<div class="arrow_down" id="two"></div>
 				<div class="arrow_down" id="three"></div>
-				<div class="arrow_down" id="four"></div>
+				<div class="arrow_down" id="four"></div>			
 			</div>
 			<div class="projets">
 				<figure>
@@ -186,7 +190,7 @@
 					Tél : 01 02 03 04 05</address>
 					<p>
 						<label for="nameinput"></label>
-						<input type="text" name="nom" id="nameinput" placeholder="Nom" required />
+						<input type="text" name="nom" id="nameinput" placeholder="Name" required />
 					</p>
 					<p>
 						<label for="emailinput"></label>
@@ -194,10 +198,10 @@
 					</p>
 					<p>
 						<label for="subjectinput"></label>
-						<input type="text" name="subject" id="subjectinput" placeholder="Sujet" required />
+						<input type="text" name="subject" id="subjectinput" placeholder="Subject" required />
 					</p>
 					<p>
-						<textarea name="message" id="message" rows="10" cols="35" placeholder="Message..."></textarea> 
+						<textarea name="message" id="message" rows="8" cols="35" placeholder="Message"></textarea> 
 					</p>
 					<p>
 						<input class="send" type="submit" value="Send Message">
