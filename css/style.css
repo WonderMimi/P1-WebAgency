@@ -10,29 +10,15 @@
 /* POLICES */
 
 @font-face {
-   font-family: 'Roboto-Light';
-   src: url(fonts/'Roboto-Light.ttf');
+   font-family: 'Roboto-Light', Arial, 'Sans serif';
+   src: url(../fonts/Roboto-Light.ttf);
 }
-
-/*==============================================*/
-
-/* ANIMATION DU CAROUSEL */
-
-/* @keyframes slidein {
-	0% {
-		transform: translateX(0);
-	}
-	50% {
-		transform: translateX(-3200px);
-	}
-	100% {
-		transform: translateX(0);
-	}
-} */
 
 /*==============================================*/
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -41,15 +27,14 @@ body {
 	font-family: 'roboto-light', Arial, serif;
 	font-size: 1em;
 	line-height: 1.4;
-	width: 90%;
-	margin: auto;
+	width: 100%;
 }
 
 header a {
 	padding: 0 10px;
 }
 
-/*---------------- STYLE DE LA BARRE DE NAVIGATION  ------------------*/
+/*---------------- STYLE DE LA BARRE DE NAVIGATION PRINCIPALE  ------------------*/
 
 .navbar {
 	position: fixed;
@@ -65,6 +50,14 @@ header a {
 	z-index: 1000;
 }
 
+#logo {
+	margin-right: 25%;
+}
+
+#main_nav {
+	margin-right: 5%;
+}
+
 li {
 	list-style: none;
 	display: inline;
@@ -73,11 +66,11 @@ li {
 li a {
 	text-decoration: none;
 	color: #000;
-	padding-top: 30px;
+	padding-top: 60%;
 }
 
-.navbar li a:hover {
-	border-top: 3px solid #5cadd3; 
+.main_nav a:hover {
+	border-top: 3px solid #5cadd3;     /* ----> NE FONCTIONNE PAS ----- */
 }
 
 /*---------------- STYLE DU CAROUSEL  ------------------*/
@@ -88,22 +81,20 @@ li a {
 
 .container {      /* Correspond à l'ensemble du slider  */
 	position: relative;
-	/* overflow: hidden; */
-	height: 550px;
-	width: 1600px;
-	margin: 0 auto 2em;
+	height: 500px;
+	width: 100%;
 	padding-top: 6em;
 }
 
-.slides {           /* Correspond à la DIV qui englobe les deux images   */
+.slides {           /* Correspond à la DIV qui englobe l'image   */
 	position: absolute;
-	/* width: calc(1600px * 3); */
-	animation: slidein 25s infinite;
+	width: inherit;
 }
 
-.slide {           /* Correspond à chacune des iamges  */
+.slide img {           /* Correspond à l'iamge  */
 	float: left;
-	margin: 0;   
+	width: 100%;
+	height: auto;
 }
 
 .slide p {
@@ -117,7 +108,6 @@ li a {
 	bottom: 0;
 	left: 10%;
 	width: 50%;
-	padding-top: 20px;
 }
 
 #fille h1 {
@@ -127,6 +117,7 @@ li a {
 	margin: 0;
 	line-height: 1;
 	text-transform: uppercase;
+	padding: 2% 0 ;
 }
 
 .button {
@@ -140,7 +131,7 @@ li a {
 
 .left,
 .right {
-	z-index: 1000; 
+	z-index: 900; 
 	top: 40%;
 	position: absolute;
 	color: #fff;  
@@ -188,21 +179,36 @@ h2 {
 	font-size: 3rem;
 	margin-bottom: 15px;
 }
-
+       /* Style de la ligne et du point en décoration sous les titres  */
 hr {
 	background-color: lightgrey;
 	position: relative;
 	height: 1px;
-	width: 15%;
+	width: 60%;
 	display: inline-block;
-	margin-bottom: 20px;
 }
 
-.title_bullet {
+.middle_point {
 	position: absolute;
-	left: 49.5%;
+	z-index: 20;
+	background-color: #5cadd3;
 	border: 3px solid #fff;
+	height: 2%;
+	width: 1%;
+	border-radius: 100%;
 }
+
+.title_decoration {
+	display: flex;
+	width: 10%;
+	margin: auto;
+	margin-top: 0;
+	margin-bottom: 2%;
+	align-items: center;
+	justify-content: center;
+}
+
+     /* -------------------------------- FIN -----------------------------  */
 
 .nos_services,
 .nos_projets {
@@ -218,25 +224,31 @@ hr {
 .section_ss-titre {
 	font-size: 1.2rem;
 	width: 50%;
-	margin: auto;}
+	margin: auto;
+}
 
 .img_ecran {
 	width: 50%;
 }
 
 .img_ecran img {
-	width: 100%;
+	width: 80%;
 	margin: auto;
+	margin-left: 15%;
+	padding-top: 4%;
 }
+
+       /* Style de la liste des services proposés avec les icones sur la gauche  */
 
 .services_list {
 	width: 50%;
 	display: flex;
-	padding-top: 30px;
+	padding-top: 8%;
 }
 
 .services_list li {
 	display: flex;
+	padding-top: 3%;
 }
 
 h3 {
@@ -250,7 +262,7 @@ h3 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-right: 20px;
+	padding: 17px;
 }
 
 .icon .fas {
@@ -263,8 +275,12 @@ h3 {
 	position: absolute;
 	right: -10px;
 	font-size: 4em;
-	color: #5cadd3;
-	background-color: #fff;
+	background-color: #5cadd3;
+	border: 3px solid #fff;
+	height: 2%;
+	width: 1%;
+	border-radius: 100%;
+	padding: 7%;
 }
 
 .icon {
@@ -274,57 +290,86 @@ h3 {
 }
 
 .UX, .UI, .SEO {
-	width: 90%;
+	width: 60%;
+	margin-left: 5%;
 }
 
-#services,
+     /* -------------------------------- FIN -----------------------------  */
+
+#services {
+	padding-top: 20%;
+	padding-bottom: 8%;
+}
+
 #projets,
 #contact {
-	padding-top: 100px;
+	padding-top: 6%;
 }
 
 /*---------------- STYLE NOS PROJETS  ------------------*/
-.nav_projets {
-	text-align: center;
+
+#projets {
+	background-color: #f2f2f2;
 }
 
+       /* Style de la barre de navigation des projets   */
+
+.nav_projets {
+	display: grid;
+	grid-template-columns: max-content max-content max-content max-content;
+	grid-template-rows: auto auto;
+	grid-gap: 0;
+	margin-top: 3%;
+	justify-content: center;
+	text-align: center;
+	border-radius: 2%;
+}
+
+.nav_projets a {
+	padding: 10px 15px;
+	font-size: 1rem;
+	background-color:lightgrey;
+	text-decoration: none;
+	color: #000;
+}
+
+.nav_projets a:hover, #one {
+	display: content; 
+	border-bottom: 4px solid #468CAD;
+	background-color: #5cadd3;
+	color: #fff;
+}
+
+/* .nav_projets a:nth-child(1):hover{
+    border-radius: 5px 0px 0px 5px;
+}
+
+.nav_projets a:nth-child(4):hover{
+    border-radius: 0px 5px 5px 0px;
+} */
+
 .arrow_down {
-	display: inline-block;
-	margin: -5px 50px 25px 50px;
+	display: none!important;
+	margin: 10px 50px;
 	border:none;
 	border-top:10px solid #468CAD;
 	border-left:10px solid transparent;
 	border-right:10px solid transparent;
-	justify-content: space-around;
+	align-items: center;
 }
 
 #two, #three, #four {
 	visibility: hidden;
 }
 
-.nav_projets ul {
-	padding: 0;
-	text-align: center;
-}
-
-.nav_projets a {
-	padding: 10px 15px;
-	font-size: 1.5rem;
- 	background-color: lightgray;
-}
-
-.nav_projets .first {
-	background-color: #5cadd3;
-	color: #fff;
-}
-.nav_projets a:hover {
-	border-bottom: 4px solid #468CAD;
-}
+     /* -------------------------------- FIN -----------------------------  */
 
 .projets {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-around;
+	align-content: space-around;
+	margin-top: 4%;
 }
 
 .projets i {
@@ -335,31 +380,33 @@ h3 {
 	max-width: 400px;
 }
 
-figure {
+.projets figure {
 	position: relative;
 	z-index: 1;
-	overflow: hidden;     /* permet de cacher le figcaption */
-	}
+	padding-bottom: 3%;
+}
 
 .projets figcaption {
 	position: absolute;
 	z-index: 10;
-	bottom: -11em;      /* permet de descendre le figcation plus bas que la figure */
 	padding-top: 30px;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
+	visibility: hidden;
 }
 
 .projets figure:hover figcaption {
-	bottom: 5px; 
+ 	bottom: 19%; 
+	visibility: visible;
 }
 
 .projets figcaption h3,
 .projets figcaption p {
 	color: #fff;
 	padding-left: 10px;
-	font-size: 1.5em;
-	line-height: 0.6;
+	font-size: 1.2em;
+	line-height: 0.7;
+	padding-bottom: 5%;
 }
 
 .projets figcaption h3 {
@@ -368,10 +415,10 @@ figure {
 
 .eye {
 	position: absolute;
-	top: -30%;
+	top: -20%;
 	right: 15px;
-	padding: 25px;
-	font-size: 1.5rem;
+	padding: 10px;
+	font-size: 1em;
 	border: 2px solid #fff;
 	border-radius: 50%;
 	background: #5cadd3;
@@ -383,11 +430,13 @@ figure {
 	position: relative;
 }
 
+     /* ---------------------- Style de la carte Google ----------------  */
+
 iframe {
 	position: relative;
 	top: 0;
 	width: 100%;
-	height: 700px;
+	height: 800px;
 	z-index: 10;
 }
 
@@ -395,23 +444,32 @@ iframe {
 	position: absolute;
 	top: 100px;
 	width: 100%;
-	height: 700px;
+	height: 800px;
 	background-color: rgb(105, 198, 231);
 	opacity: 0.3;
 	z-index: 100;
 }
 
-.contact_info {
+     /* -------------------------  Style du formulaire  -------------------  */
+
+form {
 	position: absolute;
-	z-index: 1000;
+	z-index: 900;
+	height: 70%;
+	width: 23%;
 	right: 10%;
-	top: 30%;
+	top: 20%;
 	background-color: rgba(255, 255, 255, 0.7);
-	padding: 0 10px;
+	padding: 20px;
+}
+
+.contact_info h3 {
+	font-size: 1.5rem;
+	font-weight: 800;
 }
 
 address {
-	font-size: 0.8em;
+	font-size: 1rem;
 	font-style: normal;
 }
 
@@ -419,10 +477,28 @@ address {
 #emailinput,
 #subjectinput {
 	width: 100%;
+	border: 1px solid lightgray;
+	border-radius: 10%;
+	line-height: 2em;
+	padding: 2%;
+	margin: 3% 0;
+}
+
+textarea {
+	font-family: 'Roboto-Light', Arial, 'Sans serif';
+	width: 100%;
+	border: 1px solid lightgray;
+	border-radius: 3%;
+	line-height: 2em;
+	padding: 2%;
+	margin: 3% 0;
 }
 
 .send {
 	background-color: #5cadd3;
+	border: 1px solid #5cadd3;
+	border-bottom: 4px solid #468CAD;
+	border-radius: 10%;
 	color: #fff;
 	font-weight: bold;
 	padding: 5px 10px;
