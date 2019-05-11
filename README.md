@@ -9,5 +9,3 @@ lorsque l'on se déplace dans la page. Les différentes sections attendues sont 
 - La liste des services offerts par l'agence
 - Des exemples de projets déjà réalisés
 - Une carte avec un formulaire de contact
-
-Voir le pdf dans le dossier "Consignes"
