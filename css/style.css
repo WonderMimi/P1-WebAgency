@@ -1,12 +1,3 @@
-/* MEDIA QUERIES */
-@media screen and (max-width: 768px) {
-	.navbar {
-		flex-direction: column;
-	}
-}
-
-/*==============================================*/
-
 /* POLICES */
 
 @font-face {
@@ -34,7 +25,7 @@ header a {
 	padding: 0 10px;
 }
 
-/*---------------- STYLE DE LA BARRE DE NAVIGATION PRINCIPALE  ------------------*/
+/*------------------- STYLE DE LA BARRE DE NAVIGATION PRINCIPALE  ------------------*/
 
 .navbar {
 	position: fixed;
@@ -42,20 +33,22 @@ header a {
 	left: 0;
 	width: 100%;
 	height: 6em;
+	z-index: 1000;
+	background: #fff;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	align-items: center;
-	background: #fff;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	z-index: 1000;
+	justify-content: space-between;
+	flex-wrap: nowrap;
 }
 
 #logo {
-	margin-right: 25%;
+	margin-left: 10%;
 }
 
 #main_nav {
-	margin-right: 5%;
+	margin-right: 16%;
 }
 
 li {
@@ -66,32 +59,32 @@ li {
 li a {
 	text-decoration: none;
 	color: #000;
-	padding-top: 60%;
+	padding-top: 11%;
 }
 
-.main_nav a:hover {
-	border-top: 3px solid #5cadd3;     /* ----> NE FONCTIONNE PAS ----- */
+#main_nav a:hover {
+	border-top: 7px solid #5cadd3;  
 }
 
-/*---------------- STYLE DU CAROUSEL  ------------------*/
+/*--------------------------- STYLE DU CAROUSEL  ---------------------*/
 #main {
 	max-width: 1920px;
 	margin: auto;
 }
 
-.container {      /* Correspond à l'ensemble du slider  */
+.container {          /* Correspond à l'ensemble du slider  */
 	position: relative;
 	height: 500px;
 	width: 100%;
 	padding-top: 6em;
 }
 
-.slides {           /* Correspond à la DIV qui englobe l'image   */
+.slides {             /*  Correspond à la division qui englobe l'image   */
 	position: absolute;
 	width: inherit;
 }
 
-.slide img {           /* Correspond à l'iamge  */
+.slide img {           /* Correspond à l'image  */
 	float: left;
 	width: 100%;
 	height: auto;
@@ -99,12 +92,14 @@ li a {
 
 .slide p {
 	color: #fff;
+	font-size: .95em;
+	margin-top: 1%;
 }
 
 .slides figcaption {
 	position: absolute;
 	z-index: 10;
-	top: 30%;
+	top: 32%;
 	bottom: 0;
 	left: 10%;
 	width: 50%;
@@ -117,10 +112,9 @@ li a {
 	margin: 0;
 	line-height: 1;
 	text-transform: uppercase;
-	padding: 2% 0 ;
 }
 
-.button {
+#button {				/*      bouton bleu sur le slider      */
 	background-color: #5cadd3;
 	font-weight: bolder;
 	color: #fff;
@@ -129,36 +123,56 @@ li a {
 	text-decoration: none;
 }
 
+						/*      fleches de defilement        */
+.fa-chevron-left,
+.fa-chevron-right {
+	color: #fff;
+	font-size: 1.2rem;
+}
+
 .left,
 .right {
 	z-index: 900; 
 	top: 40%;
-	position: absolute;
-	color: #fff;  
-	font-size: 1rem;
-	text-decoration: none;
+	position: absolute;	
+	padding: 30px 40px;
+	background-color: rgba(0,0,0,0.3);
+	-webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+	border-radius: 100%;
+	cursor: pointer;
 }
 
-.right {
-	padding: 20px 10px 20px 20px;
-	right: 0;
-	background-color: rgba(0,0,0,0.3);
-	border-radius: 50% 0 0 50%;
+.fa-chevron-left {
+	-webkit-transform: translateX(+160%);
+	transform: translateX(+160%);
 }
 
 .left {
-	padding: 20px 20px 20px 10px;
-	left: 0;
-	background-color: rgba(0,0,0,0.3);
-	border-radius: 0 50% 50% 0;
+	-webkit-transform: translateX(-55%);
+ 	transform: translateX(-55%);
+}
+
+.fa-chevron-right {
+	-webkit-transform: translateX(-160%);
+	transform: translateX(-160%);
+}
+
+.right {
+	-webkit-transform: translateX(+2025%);
+	transform: translateX(+2025%);
 }
 
 .right:hover {
+	-webkit-border-radius:50% 0 0 50%;
+    -moz-border-radius:50% 0 0 50%;
 	background-color: rgba(255,255,255,0.3);
 	border-radius: 50% 0 0 50%;
 }
 
 .left:hover {
+	-webkit-border-radius:0 50% 50% 0;
+    -moz-border-radius:0 50% 50% 0;
 	background-color: rgba(255,255,255,0.3);
 	border-radius: 0 50% 50% 0;
 }
@@ -194,15 +208,19 @@ hr {
 	background-color: #5cadd3;
 	border: 3px solid #fff;
 	height: 2%;
-	width: 1%;
+	width: 1%;	
+	-webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
 	border-radius: 100%;
 }
 
 .title_decoration {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 10%;
 	margin: auto;
-	margin-top: 0;
+	margin-top: 0%;
 	margin-bottom: 2%;
 	align-items: center;
 	justify-content: center;
@@ -217,6 +235,8 @@ hr {
 
 .services,
 .projets {
+	display: -webkit-box;
+	display: -ms-flexbox; 
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -225,6 +245,8 @@ hr {
 	font-size: 1.2rem;
 	width: 50%;
 	margin: auto;
+	margin-top: -0.5%;
+	color: #888;
 }
 
 .img_ecran {
@@ -242,13 +264,16 @@ hr {
 
 .services_list {
 	width: 50%;
+	display: -webkit-box;
+	display: -ms-flexbox; 
 	display: flex;
-	padding-top: 8%;
+ 	padding-top: 8%;
 }
 
 .services_list li {
+	display: -webkit-box;
+	display: -ms-flexbox; 
 	display: flex;
-	padding-top: 3%;
 }
 
 h3 {
@@ -259,26 +284,34 @@ h3 {
 .icon_left {
 	position: relative;
 	width: 10%;
+	display: -webkit-box;
+	display: -ms-flexbox; 
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 17px;
+	margin-bottom: 1%;
 }
 
 .icon .fas {
 	border: 1px solid lightgrey;
+	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
 	border-radius: 50%;
-	padding: 15px;
+	padding: 29%;
+	font-size:2rem;
 }
 
 .blue_dot {
 	position: absolute;
-	right: -10px;
+	right: 2px;
 	font-size: 4em;
 	background-color: #5cadd3;
-	border: 3px solid #fff;
+	border: 5px solid #fff;
 	height: 2%;
 	width: 1%;
+ 	-webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
 	border-radius: 100%;
 	padding: 7%;
 }
@@ -290,11 +323,17 @@ h3 {
 }
 
 .UX, .UI, .SEO {
-	width: 60%;
+	width: 95%;
 	margin-left: 5%;
 }
 
-     /* -------------------------------- FIN -----------------------------  */
+.UX p, .UI p, .SEO p {
+	color: #888;
+	font-size: 0.9em;
+	font-weight: 700;
+}
+
+     /* -------------------------  FIN de la section "services" -----------------------------  */
 
 #services {
 	padding-top: 20%;
@@ -312,44 +351,58 @@ h3 {
 	background-color: #f2f2f2;
 }
 
-       /* Style de la barre de navigation des projets   */
-
-.nav_projets {
-	display: grid;
-	grid-template-columns: max-content max-content max-content max-content;
-	grid-template-rows: auto auto;
-	grid-gap: 0;
+	   /* Style de la barre de navigation des projets   */
+	   
+.nav_projets ul {
+	display: -webkit-box;
+	display: -ms-flexbox; 	
+	display: flex;
+ 	justify-content: center;
+	align-items: center;
+	padding: 5px 0 10px 0;
 	margin-top: 3%;
-	justify-content: center;
-	text-align: center;
-	border-radius: 2%;
-}
+}	   
+
+.nav_projets li {
+	display: inline;
+} 
 
 .nav_projets a {
-	padding: 10px 15px;
-	font-size: 1rem;
+	padding: 11px 15px;
 	background-color:lightgrey;
-	text-decoration: none;
-	color: #000;
+	font-size: 1rem;
+	border: 1px solid lightgrey;
+	white-space: nowrap;  /* pour éviter que "All works" ne soit coupe en 2  */   
 }
 
-.nav_projets a:hover, #one {
-	display: content; 
+.nav_projets a:hover {
+	color: #fff;
 	border-bottom: 4px solid #468CAD;
 	background-color: #5cadd3;
-	color: #fff;
 }
 
-/* .nav_projets a:nth-child(1):hover{
-    border-radius: 5px 0px 0px 5px;
+.nav_projets a:hover::after {
+	font-family: "Font Awesome 5 Free";
+	content: "\f0d7";
+	position: absolute;
+	margin-top: 21px;
+	margin-left: -2.5%;
+	color: #468CAD;
+	font-size: 1.5rem;
+	font-weight: 900;
+} 
+
+.nav_projets .first {
+	border-radius: 3px 0px 0px 3px;
 }
 
-.nav_projets a:nth-child(4):hover{
-    border-radius: 0px 5px 5px 0px;
-} */
+.nav_projets .last {
+	border-radius: 0px 3px 3px 0px;
+} 
 
-.arrow_down {
-	display: none!important;
+/*
+.arrow_down {                  petit triangle bleu  
+	opacity: 0;
 	margin: 10px 50px;
 	border:none;
 	border-top:10px solid #468CAD;
@@ -357,14 +410,14 @@ h3 {
 	border-right:10px solid transparent;
 	align-items: center;
 }
+*/
+     /* ---------------------------- FIN navigation projets -----------------------------  */
 
-#two, #three, #four {
-	visibility: hidden;
-}
-
-     /* -------------------------------- FIN -----------------------------  */
+	 /* ---------------------------- Galerie realisations clients -----------------------------  */
 
 .projets {
+	display: -webkit-box;
+	display: -ms-flexbox; 
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -420,6 +473,8 @@ h3 {
 	padding: 10px;
 	font-size: 1em;
 	border: 2px solid #fff;
+ 	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
 	border-radius: 50%;
 	background: #5cadd3;
 }
@@ -438,16 +493,16 @@ iframe {
 	width: 100%;
 	height: 800px;
 	z-index: 10;
+	opacity: 0.65;
 }
 
-.map_overlay {
+.map_strip {
 	position: absolute;
-	top: 100px;
+	top: 110px;
 	width: 100%;
-	height: 800px;
+	height: 820px;
 	background-color: rgb(105, 198, 231);
-	opacity: 0.3;
-	z-index: 100;
+	z-index: 1;
 }
 
      /* -------------------------  Style du formulaire  -------------------  */
@@ -478,6 +533,8 @@ address {
 #subjectinput {
 	width: 100%;
 	border: 1px solid lightgray;
+	-webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
 	border-radius: 10%;
 	line-height: 2em;
 	padding: 2%;
@@ -488,6 +545,8 @@ textarea {
 	font-family: 'Roboto-Light', Arial, 'Sans serif';
 	width: 100%;
 	border: 1px solid lightgray;
+ 	-webkit-border-radius: 3%;
+	-moz-border-radius: 3%;
 	border-radius: 3%;
 	line-height: 2em;
 	padding: 2%;
@@ -498,8 +557,127 @@ textarea {
 	background-color: #5cadd3;
 	border: 1px solid #5cadd3;
 	border-bottom: 4px solid #468CAD;
+	-webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
 	border-radius: 10%;
 	color: #fff;
 	font-weight: bold;
 	padding: 5px 10px;
 }
+
+/*-----------------------------    MEDIA QUERIES    --------------------------*/
+
+	/*   pour les tablettes rt plus grands écrans   */
+
+
+@media screen and (min-width: 768px ) {
+	.m_nav {
+		display: none;
+	}
+
+}
+
+	/*  pour les smartphones moyens et petites tablettes     */
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+
+	
+
+	header {
+		display: block;
+		flex-direction: column;
+		max-width: 100%;
+	}
+
+	#main_nav {          /* pour cacher la navigation principale sur mobile */
+		display: none;
+	}
+
+	.m_nav {         /*   pour afficher la nav speciale mobile    */
+		display: flex;
+	}
+
+	.m_nav ul {
+		width: 100%;
+  		text-align: center;
+		padding:5px 0;
+	}
+
+	.m_nav a {
+		padding: 15px;
+	}
+	
+	.material-icons {        /* Home logo  */
+		font-size: 26px;
+		padding-left: 10px;
+	}
+
+	#logo {
+		margin-left: 0px;
+		justify-content: center;
+		max-height: 50%;
+		padding: 10px 0 0 0;
+	}
+
+	.container {
+		height:20vh;
+	}
+	
+	#fille h1 {
+		font-size: 0.8em;
+		padding: 0;
+	}
+	
+	.slide p {
+		font-size: 0.8em;
+		margin-right: 30%;	
+	}
+
+	.button {
+		float: right;
+	}
+		
+	h2 {
+		font-size: 1.7rem;
+	}
+
+	.section_ss-titre {
+		font-size: 1rem;
+		width: 90%;
+		margin: auto;
+	}
+
+	#services {
+		padding-top: 0;	
+	}
+	
+	.services {
+		justify-content: center;
+	}
+
+	.img_ecran img {
+		width: 120%;
+		margin: auto;
+		margin-left: -24px;
+	}
+
+	.services_list {
+		width: 90%;
+		margin: auto;
+		padding-top: 0;
+	}
+	
+	.icon_left {
+		display: none;
+	}
+
+	div .UX, .UI, .SEO {
+		width: 93%;
+	}
+
+}
+
+
+
+	
+		
