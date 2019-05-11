@@ -3,24 +3,38 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width = device-width" initial-state = 1, shrink-to-fit= no>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width" initial-state = 1/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<link rel="shortcut icon" href="img/ico/favlogo.png">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="keywords" content="agence web, site web, seo, ux design, ui design, communication, développement, design" />
 	<title>WebAgency : L'agence de tous vos projets !</title>
 	<meta name="description" content="WebAgency : L'agence de tous vos projets !  Vous avez un projet web ? La WebAgency vous aide à le réaliser ! Contactez-nous">
 </head>
 <body>
-	<!-- Début de l'en-tête contenant la navigation et le logo -->
-	<header class="navbar" role="navigation">
+			<!-- Début de l'en-tête contenant la navigation et le logo -->
+	<header class="navbar">
 		<img id="logo" src="img/logo.png" alt="Logo WebAgency">
-		<ul id="main_nav">
-			<li><a href="#slider" title="Accueil">Accueil</a></li>
-			<li><a href="#services" title="Services">Services</a></li>
-			<li><a href="#projets" title="Portfolio">Portfolio</a></li>
-			<li><a href="#contact" title="Contact">Contact</a></li>
-		</ul>
+		<nav id="main_nav">
+			<ul>
+				<li><a href="#slider" title="Accueil">Accueil</a></li>
+				<li><a href="#services" title="Services">Services</a></li>
+				<li><a href="#projets" title="Portfolio">Portfolio</a></li>
+				<li><a href="#contact" title="Contact">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="m_nav">
+			<ul>
+				<li><a href="#slider" title="Accueil"><i class="material-icons">home</i></a></li>
+				<li><a href="#services" title="Services">Services</a></li>
+				<li><a href="#projets" title="Portfolio">Portfolio</a></li>
+				<li><a href="#contact" title="Contact">Contact</a></li>
+			</ul>
+		</div>
 	</header>  <!-- Fin de l'en-tête  -->
+
 	<section id="main">  <!--  Début du contenu principal de la page contenant le carousel, "Nos Servicces", "Nos projets" et "Nous contacter"  -->
 								<!--       Carousel       -->
 		<section class="container" id="slider">
@@ -30,11 +44,16 @@
 						<h1><span>webagency</span>: L'AGENCE DE TOUS <br> VOS PROJETS !</h1>
 						<p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
 						<br/>
-						<a href="#" class="button">Plus d'infos</a>
+						<a href="#" id="button">Plus d'infos</a>
 					</figcaption>
 				</figure>
-				<div><a class="left" href="#">&lt;</a></div>
-				<div><a class="right" href="#">&gt;</a></div>
+				<div class="left"> <!-- fleche du slider -->
+					<i class="fa fa-chevron-left"></i>
+				</div>
+	
+				<div class="right"> <!-- fleche du slider -->
+					<i class="fa fa-chevron-right"></i>
+				</div>
 			</div>
 		</section>
 								<!-- Début de "Nos services" -->
@@ -56,7 +75,7 @@
 					<ul>
 						<li>
 							<div class="icon_left"> <!-- icons à gauche de la liste -->
-								<span class="icon"><i class="fas fa-chart-line fa-lg"></i></i></span>
+								<span class="icon"><i class="fas fa-chart-line fa-lg"></i></span>
 								<div class="blue_dot"></div>
 							</div>
 							<div class="UX">
@@ -97,18 +116,17 @@
 					<div class="middle_point"></div>
 					<hr class="right_line">
 				</div>
-				<p class="section_ss-titre">Voici une sélection de réalisations pour nos clients</p>
+				<p class="section_ss-titre">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut magni recusandae maiores quam iure consectetur sapiente exercitationem quae?s</p>
+				<div><i class="fa.fa-caret-down fa-4x" id="one"></i></div>
 			</div>	
-			<div class="nav_projets">
-				<div><a href="#" class="first">All works</a></div>
-				<div><a href="#">Creative</a></div>
-				<div><a href="#">Corporate</a></div>
-				<div><a href="#" class="last">Portfolio</a></div>	
-				<div class="arrow_down" id="one"></div>
-				<div class="arrow_down" id="two"></div>
-				<div class="arrow_down" id="three"></div>
-				<div class="arrow_down" id="four"></div>			
-			</div>
+			<nav class="nav_projets">
+				<ul>
+					<li><a href="#" class="first">All works</a></li>
+					<li><a href="#">Creative</a></li>
+					<li><a href="#">Corporate</a></li>
+					<li><a href="#" class="last">Portfolio</a></li>
+				</ul>
+			</nav>
 			<div class="projets">
 				<figure>
 					<img src="img/portfolio/party_city.jpg" alt="lunettes de déguisement"/>
@@ -178,10 +196,12 @@
 		</section>   <!-- Fin de "Nos projets"  -->
 
 		<section id="contact">   <!-- Début de "Nous contacter" -->
+			
 	     						<!-- google map -->
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2216096807224!2d2.347636915674888!3d48.87305177928887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145ccb3091%3A0x9495beee8c96ec27!2s25+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1555941313425!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>		
-			<div class="map_overlay"></div>
-<!-- 			<div class="hover_map"></div> -->			                     <!-- formulaire de contact -->
+			<div class="map_strip"></div>
+			
+								<!-- formulaire de contact -->
 			<div class="contact_info"> 
 				<form method="post" action="fichier.php" id="form">
 					<h3>Contact info</h3>
